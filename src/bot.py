@@ -40,7 +40,11 @@ def main():
     count = 0
     while True:
         count += 1
-        print(f'[{math.trunc(time.time())}]: Working v4', count, display_karma(reddit))
+        if count % 2 == 0:
+            tick_or_tock = 'tick...'
+        else:
+            tick_or_tock = '...tock'
+        print(f'[{math.trunc(time.time())}]: {tick_or_tock} v4', count, display_karma(reddit))
         time.sleep(5)
 
 if __name__ == "__main__":
