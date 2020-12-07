@@ -30,7 +30,7 @@ def init_reddit() -> praw.Reddit:
 
 def display_karma(reddit):
     user = reddit.user.me()
-    print(f'Karma for {user.name}:', user.comment_karma)
+    return 'Karma for {user.name}: {user.comment_karma}'
 
 def main():
     print("Starting up")
