@@ -6,7 +6,7 @@ def main():
     count = 0
     while True:
         count += 1
-        print(f'[{math.trunc(time.time())}]: Working v2', count)
+        print(f'[{math.trunc(time.time())}]: Working v3', count)
         time.sleep(5)
 
 if __name__ == "__main__":
