@@ -30,7 +30,7 @@ def init_reddit() -> praw.Reddit:
 
 def display_karma(reddit):
     user = reddit.user.me()
-    print(f'Karma for {user.name}:', user.comment_karma)
+    return f'Karma for {user.name}: {user.comment_karma}'
 
 def main():
     print("Starting up")
@@ -40,7 +40,7 @@ def main():
     count = 0
     while True:
         count += 1
-        print(f'[{math.trunc(time.time())}]: Working v3', count, display_karma(reddit))
+        print(f'[{math.trunc(time.time())}]: Working v4', count, display_karma(reddit))
         time.sleep(5)
 
 if __name__ == "__main__":
